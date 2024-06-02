@@ -134,8 +134,8 @@ def _save_splits(
     train_path.mkdir(parents=True, exist_ok=True)
     test_path.mkdir(parents=True, exist_ok=True)
 
-    train.to_csv(train_path / f"{train_path_name}.csv", header=False, index=False)
-    test.to_csv(test_path / f"{test_path_name}.csv", header=False, index=False)
+    train.to_csv(train_path / f"{train_path_name}.csv", header=True, index=False)
+    test.to_csv(test_path / f"{test_path_name}.csv", header=True, index=False)
 
 
 def preprocess(base_directory):
@@ -176,8 +176,8 @@ def preprocess(base_directory):
     X_train_clf, X_test_clf, y_train_clf, y_test_clf, label_encoding = _split_data_discount_on_release(preprocessed_tabular_df)
     X_train_reg, X_test_reg, y_train_reg, y_test_reg = _split_data_discount_after_release(preprocessed_tabular_df)
 
-    _save_splits(base_directory, X_train_clf, X_test_clf, y_train_clf, y_test_clf, "train_clf", "test_clf")
-    _save_splits(base_directory, X_train_reg, X_test_reg, y_train_reg, y_test_reg, "train_reg", "test_reg")
+    _save_splits(base_directory, X_train_clf, y_train_clf, X_test_clf, y_test_clf, "train_clf", "test_clf")
+    _save_splits(base_directory, X_train_reg, y_train_reg, X_test_reg, y_test_reg, "train_reg", "test_reg")
 
 
 if __name__ == "__main__":

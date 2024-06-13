@@ -13,9 +13,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the rest of the application code into the container
 COPY . .
 
-# Copy the .env file (ensure the correct path)
-COPY ../.env .env
-
 # Expose the port that Streamlit uses
 EXPOSE 8501
 

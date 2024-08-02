@@ -2,10 +2,9 @@
 
 This project is a Streamlit application that predicts how long a game will take to go on sale after its release, utilizing data from the Steam API and IsThereAnyDeal API. The prediction model is based on two XGBoost algorithms trained on historical game data.
 
-[Try it on a new release game now!](http://54.163.212.0:8501)
 
 
-<img src="images/SteamSalesSenseiScreenshot.jpg" alt="Target Distribution" width="700" height="400">
+<img src="steamsales_video_demo.gif" alt="Video Demo" width="700" height="400">
 
 ## Project Overview
 

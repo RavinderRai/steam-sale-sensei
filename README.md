@@ -1,6 +1,6 @@
 # Steam Sale Sensei
 
-This project is a Streamlit application that predicts how long a game will take to go on sale after its release, utilizing data from the Steam API and IsThereAnyDeal API. The prediction model is based on two XGBoost algorithms trained on historical game data.
+This project is a Streamlit application that predicts how long a game will take to go on sale after its release, utilizing data from the Steam API and IsThereAnyDeal API. The prediction model is based on two XGBoost algorithms trained on historical game data, one to detect if the game will go on sale within a few days, and the other to detect how long, if it doesn't.
 
 
 
